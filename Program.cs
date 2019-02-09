@@ -22,13 +22,29 @@ namespace ProtonDB_Parsing
             var webClient = new WebClient();
             webClient.Credentials = new NetworkCredential(loginId, password);
 
-            WebRequest wr = WebRequest.Create(libraryUrl);
-            wr.Credentials = webClient.Credentials;
-            if (wr.ContentLength != 0)
+            WebRequest request = WebRequest.Create(libraryUrl);
+            request.Credentials = webClient.Credentials;
+            if (request.ContentLength != 0)
             {
                 Console.Write("Yeet\n");
 
             }
+            
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse ();
+            // Display the status.
+            Console.WriteLine (response.StatusDescription);
+            // Get the stream containing content returned by the server.
+            Stream dataStream = response.GetResponseStream ();
+            // Open the stream using a StreamReader for easy access.
+            StreamReader reader = new StreamReader (dataStream);
+            // Read the content.
+            string responseFromServer = reader.ReadToEnd ();
+            // Display the content.
+            Console.WriteLine (responseFromServer);
+            // Cleanup the streams and the response.
+            reader.Close ();
+            dataStream.Close ();
+            response.Close ();
 
         }
     }

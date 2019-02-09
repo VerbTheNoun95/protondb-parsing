@@ -1,0 +1,6 @@
+/home/alex/bin/JetBrains/repos/Rider/ProtonDB_Parsing/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttribute.cs
+/home/alex/bin/JetBrains/repos/Rider/ProtonDB_Parsing/bin/Debug/ProtonDB_Parsing.pdb
+/home/alex/bin/JetBrains/repos/Rider/ProtonDB_Parsing/bin/Debug/ProtonDB_Parsing.exe
+/home/alex/bin/JetBrains/repos/Rider/ProtonDB_Parsing/obj/Debug/ProtonDB_Parsing.exe
+/home/alex/bin/JetBrains/repos/Rider/ProtonDB_Parsing/obj/Debug/ProtonDB_Parsing.pdb
+/home/alex/bin/JetBrains/repos/Rider/ProtonDB_Parsing/bin/Debug/HtmlAgilityPack.dll

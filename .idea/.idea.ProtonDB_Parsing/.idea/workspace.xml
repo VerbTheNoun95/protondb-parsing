@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13a3292f-ff3d-46bc-a689-3272e8ddde7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProtonDB_Parsing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProtonDB_Parsing/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProtonDB_Parsing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProtonDB_Parsing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,13 +16,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="280">
+              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
               <folding>
-                <marker date="1549730430882" expanded="true" signature="6:53" ph="..." />
-                <marker date="1549730430882" expanded="true" signature="81:217" ph="{...}" />
-                <marker date="1549730430882" expanded="true" signature="110:215" ph="{...}" />
-                <marker date="1549730430882" expanded="true" signature="163:209" ph="{...}" />
+                <marker date="1549736758119" expanded="true" signature="6:71" ph="..." />
+                <marker date="1549736758119" expanded="true" signature="99:691" ph="{...}" />
+                <marker date="1549736758119" expanded="true" signature="128:689" ph="{...}" />
+                <marker date="1549736758119" expanded="true" signature="181:683" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -132,12 +132,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549730116434</updated>
-      <workItem from="1549730120783" duration="1515000" />
+      <workItem from="1549730120783" duration="2671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1515000" />
+    <option name="totallyTimeSpent" value="2671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -150,6 +150,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-8" width="1366" height="761" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
@@ -160,7 +161,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Unit Tests" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32866043" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Build" weight="0.32866043" />
@@ -199,10 +200,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <marker date="1549730112606" expanded="false" signature="6:62" ph="..." />
-            <marker date="1549730112606" expanded="true" signature="64:251" ph="/* General Information about an assembly is controlled through the following ... */" />
-            <marker date="1549730112606" expanded="true" signature="570:780" ph="/* Setting ComVisible to false makes the types in this assembly not visible ... */" />
-            <marker date="1549730112606" expanded="true" signature="955:1282" ph="/* Version information for an assembly consists of the following four values: ... */" />
+            <marker date="1549735855488" expanded="false" signature="6:62" ph="..." />
+            <marker date="1549735855488" expanded="true" signature="64:251" ph="/* General Information about an assembly is controlled through the following ... */" />
+            <marker date="1549735855488" expanded="true" signature="570:780" ph="/* Setting ComVisible to false makes the types in this assembly not visible ... */" />
+            <marker date="1549735855488" expanded="true" signature="955:1282" ph="/* Version information for an assembly consists of the following four values: ... */" />
           </folding>
         </state>
       </provider>
@@ -217,13 +218,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="280">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
           <folding>
-            <marker date="1549730430882" expanded="true" signature="6:53" ph="..." />
-            <marker date="1549730430882" expanded="true" signature="81:217" ph="{...}" />
-            <marker date="1549730430882" expanded="true" signature="110:215" ph="{...}" />
-            <marker date="1549730430882" expanded="true" signature="163:209" ph="{...}" />
+            <marker date="1549736758119" expanded="true" signature="6:71" ph="..." />
+            <marker date="1549736758119" expanded="true" signature="99:691" ph="{...}" />
+            <marker date="1549736758119" expanded="true" signature="128:689" ph="{...}" />
+            <marker date="1549736758119" expanded="true" signature="181:683" ph="{...}" />
           </folding>
         </state>
       </provider>

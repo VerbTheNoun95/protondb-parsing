@@ -18,21 +18,27 @@ namespace ProtonDB_Parsing
             HtmlWeb web = new HtmlWeb();
             HtmlDocument doc = web.Load(libraryUrl);
 
-            var entry = doc.DocumentNode.SelectNodes("/html/body/div//div//div//div//div//div//div//div//div//div//div//a");
+            // Look for appid's on the page
+            var nodes = doc.DocumentNode.SelectSingleNode("//body");
 
-            if (entry != null)
+            if (nodes != null)
             {
-                foreach (var node in entry)
+                foreach (var node in nodes.InnerText.Split('{').Where(
+                    node => node.Contains("\"appid\":")))
                 {
-                    Console.WriteLine(node.InnerText);
+                    // We got 'em!
+                    var gameEntry = node.Split(':');
+                    var gameId = gameEntry[1].Split(',')[0];
+                    Console.WriteLine(gameId);
                 }
+
             }
             else
             {
                 Console.WriteLine("Node empty.");
             }
 
-            Console.ReadKey(true);
+//            Console.ReadKey(true);
         }
     }
 }

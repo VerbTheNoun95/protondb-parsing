@@ -1,8 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Net;
+using System.Collections.Generic;
 using HtmlAgilityPack;
+using ProtonDB_Parsing.Parser;
 
 namespace ProtonDB_Parsing
 {
@@ -13,32 +14,43 @@ namespace ProtonDB_Parsing
             // Scratch work to eventually factor into sane compartments
             Console.WriteLine("Please enter your Steam username:");
             string personaName = Console.ReadLine();
-            string libraryUrl = "https://steamcommunity.com/id/" + personaName + "/games/?tab=all";
+            
+            SteamParser parser = new SteamParser(personaName);
 
-            HtmlWeb web = new HtmlWeb();
-            HtmlDocument doc = web.Load(libraryUrl);
+            List<int> appIds = parser.GetSteamAppIds();
 
-            // Look for appid's on the page
-            var nodes = doc.DocumentNode.SelectSingleNode("//body");
-
-            if (nodes != null)
+            foreach (var id in appIds)
             {
-                foreach (var node in nodes.InnerText.Split('{').Where(
-                    node => node.Contains("\"appid\":")))
+                Console.WriteLine(id);
+
+                string ProtonUrl = "https://www.protondb.com/app/" + id;
+                Console.WriteLine(ProtonUrl);
+                
+                HtmlWeb web = new HtmlWeb();
+                HtmlDocument doc = web.Load(ProtonUrl);
+
+                var titleNode = doc.DocumentNode
+                    .SelectSingleNode("/html/body/div[1]/div[1]/main/div/div[1]/span");
+
+                var statusNode = doc.DocumentNode
+                    .SelectSingleNode("/html/body/div[1]/div[1]/main/div/div[1]/div[1]/div/span");
+
+                var nodes = doc.DocumentNode.SelectSingleNode("/html");
+
+                if (nodes == null)
                 {
-                    // We got 'em!
-                    var gameEntry = node.Split(':');
-                    var gameId = gameEntry[1].Split(',')[0];
-                    Console.WriteLine(gameId);
+                    Console.WriteLine("Node empty.");
+                }
+                else
+                {
+                    Console.WriteLine(nodes.InnerHtml);
                 }
 
-            }
-            else
-            {
-                Console.WriteLine("Node empty.");
+                break;
             }
 
 //            Console.ReadKey(true);
         }
     }
 }
+

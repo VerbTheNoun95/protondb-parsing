@@ -7,8 +7,8 @@ namespace ProtonDB_Parsing.Parser
 {
     public class SteamParser
     {
-        private string PersonaName { get; set; }
-        private string LibraryUrl { get; set; }
+        private string PersonaName { get; }
+        private string LibraryUrl { get; }
 
         public SteamParser(string personaName)
         {

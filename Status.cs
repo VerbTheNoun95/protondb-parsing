@@ -7,6 +7,7 @@ namespace ProtonDB_Parsing
         Gold,
         Silver,
         Bronze,
-        Borked
+        Borked,
+        None
     }
 }

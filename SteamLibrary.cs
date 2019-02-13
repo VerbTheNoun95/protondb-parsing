@@ -15,14 +15,14 @@ namespace ProtonDB_Parsing
             FirefoxOptions options = new FirefoxOptions();
             options.AddArgument("--headless");
             FirefoxDriver driver = new FirefoxDriver(options);
-            
+
             SteamParser steamParser = new SteamParser(personaName);
-            ProtonDbParser protonParser = new ProtonDbParser(driver);
 
             List<int> appIds = steamParser.GetSteamAppIds();
 
             foreach (var appId in appIds)
             {
+                ProtonDbParser protonParser = new ProtonDbParser(driver);
                 Game game = protonParser.GetGameStatus(appId);
                 CompatibilityList.Add(game);
                 Console.WriteLine(game.Name + " " + game.AppId + " " +  game.Status);

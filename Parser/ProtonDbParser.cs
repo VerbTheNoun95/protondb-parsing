@@ -35,10 +35,12 @@ namespace ProtonDB_Parsing.Parser
                         .FindElementByXPath(statusPath);
 
                     game.Status = game.GetStatus(statusNode.Text);
+                    Driver.Close();
                     return game;
                 }
                 else
                 {
+                    Driver.Close();
                     return game;
                 }
             }
@@ -46,6 +48,7 @@ namespace ProtonDB_Parsing.Parser
             {
                 Game game = new Game("_missing_", appID);
                 game.Status = Status.None;
+                Driver.Close();
                 return game;
             }
 

@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using OpenQA.Selenium.Firefox;
 using ProtonDB_Parsing.Parser;
@@ -27,7 +28,21 @@ namespace ProtonDB_Parsing
                 Console.WriteLine(game.Name + " " + game.AppId + " " +  game.Status);
             }
             
-            driver.Close();
+            driver.Quit();
+        }
+
+        public void WriteToCsv()
+        {
+            using (StreamWriter writer = new StreamWriter("ProtonDB_CompatibilityList.csv"))
+            {
+                writer.WriteLine("Name, AppID, Status");
+            
+                foreach (var game in CompatibilityList)
+                {
+                    string entry = game.Name + "," + game.AppId + "," + game.Status;
+                    writer.WriteLine(entry);
+                }
+            }
         }
     }
 }

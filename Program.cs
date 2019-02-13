@@ -20,8 +20,7 @@ namespace ProtonDB_Parsing
             SteamLibrary library = new SteamLibrary();
             library.GetCompatibilityList(personaName);
             
-            // NEXT:
-            // Add a method to write Compatibility List to csv
+            library.WriteToCsv();
         }
     }
 }

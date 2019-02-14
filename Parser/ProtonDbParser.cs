@@ -40,13 +40,13 @@ namespace ProtonDB_Parsing.Parser
                 }
                 else
                 {
+                    game.Status = Status.None;
                     return game;
                 }
             }
             else
             {
-                Game game = new Game("_missing_", appID);
-                game.Status = Status.None;
+                Game game = new Game("_missing_", appID) {Status = Status.None};
                 return game;
             }
 
